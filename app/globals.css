@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+:root{
+    --dark:#0F0F11;
+    --light:#f5f9ff;
+    --primary:#6565F1;
+    --secondary:#6B7280;
+    --background:#09090B;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+.light{
+    --dark:#f5f9ff;
+    --light:#0F0F11;
+    --secondary:#52525B ;
+    --background:#F5F5F4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+.gradient-light{
+    --background:#FAFAFA;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gradient-dark{
+    background:radial-gradient(circle at 50% 40%, rgba(98,70,234,0.15), transparent 60%),#09090b; 
 }
+
+.floating-effect{
+    animation: floating ease-in-out 5s infinite ;
+}
+
+@keyframes floating{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+}
+
+.slideup{
+    animation: slideup ease-out 1s ;
+}
+
+@keyframes slideup{
+    0%{
+        transform: translateY(40px);
+        opacity:0;
+    }
+    80%{
+        transform: translateY(-4px);
+    }
+    100%{
+        transform: translateY(0px);
+        opacity:1
+    }
+}
+
+.slidedown{
+    animation: slidedown ease-out 1s ;
+}
+
+@keyframes slidedown{
+    0%{
+        transform: translateY(-40px);
+        opacity:0;
+    }
+    80%{
+        transform: translateY(4px);
+    }
+    100%{
+        transform: translateY(0px);
+        opacity:1
+    }
+}
+
+.slideright{
+    animation: slideright ease-out 1s ;
+}
+
+@keyframes slideright{
+    0%{
+        transform: translateX(-40px);
+        opacity:0;
+    }
+    80%{
+        transform: translateX(4px);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1
+    }
+}
+
+.slideleft{
+    animation: slideleft ease-out 1s ;
+}
+
+@keyframes slideleft{
+    0%{
+        transform: translateX(40px);
+        opacity:0;
+    }
+    80%{
+        transform: translateX(-4px);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1
+    }
+}
+
