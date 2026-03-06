@@ -1,3 +1,4 @@
+"use client"
 import { supabase } from '@/lib/supabase'
 import { Reply, Trash2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
