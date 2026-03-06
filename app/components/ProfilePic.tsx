@@ -48,7 +48,7 @@ export default function ProfilePic() {
         <div className='flex flex-wrap justify-start items-center h-fit w-full gap-5 p-5'>
           
           <div className='bg-(--background) flex justify-center'>
-            <img src={imageUrl} 
+            <img src={imageUrl || ""} 
             alt="profile image" 
             className='rounded-full border-2 border-(--primary) object-cover h-50 w-50 transition duration-300' />
           </div>
