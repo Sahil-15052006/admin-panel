@@ -2,12 +2,13 @@ import MessageItem from '../components/MessageItem'
 import { supabase } from '@/lib/supabase'
 
 export default async function Messages() {
-    
-    const {data:messages,error}= await supabase
+
+  const {data:messages,error}= await supabase
     .from("messages")
     .select("*")
-  
-    if (error) throw error
+    if (error) {
+      console.log(error);
+    }
 
   return (
     <div className='p-2'>
