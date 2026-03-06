@@ -8,6 +8,9 @@ export default async function Messages() {
     .select("*")
     if (error) {
       console.log(error);
+    } else {
+      console.log('Messages fetched ');
+      
     }
 
   return (
