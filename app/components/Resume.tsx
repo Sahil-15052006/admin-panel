@@ -67,7 +67,7 @@ export default function Resume() {
         </div>
         <div className="slideright h-full flex justify-center items-center rounded-xl border-(--secondary)/50 bg-(--dark) p-5 overflow-hidden transition duration-300">
             <iframe
-              src={previewURL}
+              src={previewURL || ""}
               className="w-full h-full object-fill min-h-100 rounded-lg"
             />
         </div>
